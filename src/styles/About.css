@@ -1,0 +1,33 @@
+.card-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1.2rem;
+}
+
+.skill-card {
+  background-color: #f8f9fa;
+  border: none;
+  text-align: center;
+}
+
+.skill-card .card-title {
+  font-size: 1.1rem;
+}
+
+.list-inline-item .btn {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+img.card-img {
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+}
+
+.card-body h2, .card-body h3 {
+  margin-top: 20px;
+}

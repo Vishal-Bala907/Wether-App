@@ -1,0 +1,20 @@
+const dummyCurrent = {
+  cloudcover: 88,
+  conditions: "Partially cloudy",
+  datetime: "13:49:40",
+  dew: 82.7,
+  feelslike: 111.4,
+  humidity: 81.4,
+  icon: "partly-cloudy-day",
+  snow: 0,
+  snowdepth: 0,
+  sunrise: "05:25:20",
+  sunset: "19:22:52",
+  temp: 89.2,
+  uvindex: 6,
+  visibility: 1.2,
+  winddir: 360,
+  windgust: null,
+  windspeed: 6.9,
+};
+export default dummyCurrent;
