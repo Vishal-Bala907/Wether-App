@@ -11,7 +11,12 @@ export default function Hourly() {
           <>
             {" "}
             <div className="whether-card bg-primary p-4 rounded-3 text-light">
-              <ul className="d-flex gap-5 list-unstyled justify-content-center">
+              <ul
+                className="d-flex gap-5 list-unstyled justify-content-center"
+                style={{
+                  overflow: "overlay",
+                }}
+              >
                 <li>
                   condition : <b>{hourly.conditions}</b>
                 </li>
@@ -31,7 +36,12 @@ export default function Hourly() {
               </ul>
               <hr />
               {/* ********************************************************* */}
-              <ul className="d-flex gap-5 list-unstyled justify-content-center">
+              <ul
+                className="d-flex gap-5 list-unstyled justify-content-center"
+                style={{
+                  overflow: "overlay",
+                }}
+              >
                 <li>
                   temp : <b>{hourly.temp} F</b>
                 </li>
@@ -47,7 +57,12 @@ export default function Hourly() {
               </ul>
               <hr />
               {/* ***************************************************  */}
-              <ul className="d-flex gap-5 list-unstyled justify-content-center">
+              <ul
+                className="d-flex gap-5 list-unstyled justify-content-center"
+                style={{
+                  overflow: "overlay",
+                }}
+              >
                 <li>
                   uvindex : <b>{hourly.uvindex}</b>
                 </li>
