@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://<username>.github.io/<repository_name>",
+  "homepage": "https://Vishal-Bala907.github.io/Wether-App",
   "predeploy": "npm run build",
   "deploy": "gh-pages -d build",
   "scripts": {
