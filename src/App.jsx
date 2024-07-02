@@ -26,7 +26,7 @@ function App() {
         <Route path="/current" element={<CurrentCondition />} />
         <Route path="/hourly" element={<Hourly />} />
         <Route path="/three" element={<Threeday />} />
-        <Route path="/seven" element={<Threeday />} />
+        <Route path="/seven" element={<SevenDay />} />
         <Route path="/fourteen" element={<FourteenDays />} />
         <Route path="/about" element={<About />} />
       </Routes>
