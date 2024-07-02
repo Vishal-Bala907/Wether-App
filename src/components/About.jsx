@@ -7,6 +7,8 @@ import {
   faInstagram,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import "../styles/About.css"; // Make sure to create this CSS file
 import img from "../images/IMG_20230813_105918_666.jpg";
