@@ -4,8 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://Vishal-Bala907.github.io/Wether-App",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
