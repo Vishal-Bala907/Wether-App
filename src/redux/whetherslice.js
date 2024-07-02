@@ -34,8 +34,6 @@ const whetherSlice = createSlice({
       state.sevenDay = whether.payload.days.slice(0, 7);
       //^ 14 days
       state.fourteenDay = whether.payload.days.slice(0, 14);
-
-      console.log(whether.payload.days[0].hours);
     },
     setIsWetherLoading: (state, load) => {
       state.isWetherLoading = load.payload;
