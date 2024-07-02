@@ -13,49 +13,53 @@ import Threeday from "./components/Threeday.jsx";
 import SevenDay from "./components/SevenDay.jsx";
 import FourteenDays from "./components/FourteenDays.jsx";
 import About from "./components/About.jsx";
+import { HashRouter } from "react-router-dom";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "/",
-        element: <CurrentCondition />,
-      },
-      {
-        path: "/current",
-        element: <CurrentCondition />,
-      },
-      {
-        path: "/hourly",
-        element: <Hourly />,
-      },
-      {
-        path: "/three",
-        element: <Threeday />,
-      },
-      {
-        path: "/seven",
-        element: <SevenDay />,
-      },
-      {
-        path: "/fourteen",
-        element: <FourteenDays />,
-      },
-      {
-        path: "/about",
-        element: <About />,
-      },
-    ],
-  },
-]);
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <App />,
+//     errorElement: <ErrorPage />,
+//     children: [
+//       {
+//         path: "/",
+//         element: <CurrentCondition />,
+//       },
+//       {
+//         path: "/current",
+//         element: <CurrentCondition />,
+//       },
+//       {
+//         path: "/hourly",
+//         element: <Hourly />,
+//       },
+//       {
+//         path: "/three",
+//         element: <Threeday />,
+//       },
+//       {
+//         path: "/seven",
+//         element: <SevenDay />,
+//       },
+//       {
+//         path: "/fourteen",
+//         element: <FourteenDays />,
+//       },
+//       {
+//         path: "/about",
+//         element: <About />,
+//       },
+//     ],
+//   },
+// ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={configureStore}>
-      <RouterProvider router={router} />
+      {/* <RouterProvider router={router} /> */}
+      <HashRouter>
+        <App />
+      </HashRouter>
     </Provider>
   </React.StrictMode>
 );
