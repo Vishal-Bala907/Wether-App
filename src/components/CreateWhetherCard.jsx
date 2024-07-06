@@ -20,6 +20,7 @@ export default function CreateWhetherCard({ day, color }) {
           return (
             <>
               <div
+                key={Math.random}
                 className={`container  d-flex flex-column mt-2 row-gap-3 ${color} p-4 rounded-3`}
               >
                 <div className="temprature d-flex flex-row justify-content-center flex-wrap column-gap-5 m-2 ">

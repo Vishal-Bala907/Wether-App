@@ -1,5 +1,5 @@
 import "./App.css";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import Navbar from "./components/Navbar";
 import CategotyHeader from "./components/CategotyHeader";
 // import { Outlet } from "react-router-dom";

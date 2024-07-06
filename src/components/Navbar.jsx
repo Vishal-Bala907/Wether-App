@@ -1,36 +1,37 @@
 import React, { useEffect, useRef, useState } from "react";
 import { setWethers, setIsWetherLoading } from "../redux/whetherslice";
 import { useDispatch } from "react-redux";
+import { WHETHER_API_KEY } from "../../config";
 
-export default function navbar() {
+export default function Navbar() {
   const area = useRef();
   const [wetherArea, setWetherArea] = useState("Delhi");
   function setWether(event) {
     if (area.current.value === "") {
-      // alert("please enter location");
+      alert("please enter location");
     } else {
       event.preventDefault();
-      setWetherArea(area.current.value);
-      area.current = area.current.value;
+      let AREA = area.current.value;
+      setWetherArea(AREA);
     }
   }
 
-  const dispatcWether = useDispatch();
+  const dispatcWhether = useDispatch();
   useEffect(() => {
-    dispatcWether(setIsWetherLoading(true));
+    dispatcWhether(setIsWetherLoading(true));
     fetch(
-      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${wetherArea}?key=XDFPCPV6VVVGQRFBNHEFXWPUU`
+      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${wetherArea}?key=${WHETHER_API_KEY}`
     )
       .then((res) => {
         return res.json();
       })
       .then((data) => {
-        dispatcWether(setWethers(data));
+        dispatcWhether(setWethers(data));
       })
       .catch((error) => {
         console.log(error);
       });
-    dispatcWether(setIsWetherLoading(false));
+    dispatcWhether(setIsWetherLoading(false));
   }, [wetherArea]);
 
   return (

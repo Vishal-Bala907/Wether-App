@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ErrorPage() {
   return (
-    <div classNameName="bg-light-gray d-flex align-items-center">
+    <div className="bg-light-gray d-flex align-items-center">
       <div className="container text-center">
         <div className="row justify-content-center">
           <div className="col-md-8">
