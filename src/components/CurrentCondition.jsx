@@ -52,7 +52,7 @@ export default function CurrentCondition() {
           </div>
           <div className="uvindex">
             <TbUvIndex />
-            <span>UV inidex {current.uvindex} f</span>
+            <span>UV inidex {current.uvindex}</span>
           </div>
         </div>
 
@@ -77,8 +77,8 @@ export default function CurrentCondition() {
           </div>
           <div className="visibility">
             <span>
-              Visibility {current.visibility} miles or{" "}
-              {current.visibility * 1.6} KM
+              Visibility {(Math.round(current.visibility * 1.6) * 100) / 100}{" "}
+              Miles
             </span>
           </div>
         </div>

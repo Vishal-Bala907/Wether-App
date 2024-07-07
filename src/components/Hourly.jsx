@@ -1,9 +1,10 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { reduceHourData } from "./service/hourly";
 
 export default function Hourly() {
-  const data = useSelector((state) => state.whether.todayHourly);
-
+  const dataset = useSelector((state) => state.whether.todayHourly);
+  let data = reduceHourData(dataset);
   return (
     <div className="container d-flex row-gap-3 flex-column mb-5">
       {data.map((hourly) => {
@@ -12,25 +13,26 @@ export default function Hourly() {
             {" "}
             <div className="whether-card bg-primary p-4 rounded-3 text-light">
               <ul
-                className="d-flex gap-5 list-unstyled justify-content-center"
+                className="d-flex gap-5 list-unstyled  justify-content-center"
                 style={{
                   overflow: "overlay",
+                  flexWrap: "wrap",
                 }}
               >
                 <li>
                   condition : <b>{hourly.conditions}</b>
                 </li>
                 <li>
-                  cloudcover : <b>{hourly.cloudcover}</b>
+                  cloudcover : <b>{hourly.cloudcover}%</b>
                 </li>
                 <li>
-                  datetime : <b>{hourly.datetime}</b>
+                  Time : <b>{hourly.datetime}</b>
                 </li>
                 <li>
                   dew : <b>{hourly.dew}</b>
                 </li>
                 <li>
-                  visibilit :y{" "}
+                  visibility :
                   <b>{(Math.round(hourly.visibility * 1.6) * 100) / 100}KM</b>
                 </li>
               </ul>
@@ -40,6 +42,7 @@ export default function Hourly() {
                 className="d-flex gap-5 list-unstyled justify-content-center"
                 style={{
                   overflow: "overlay",
+                  flexWrap: "wrap",
                 }}
               >
                 <li>
@@ -61,6 +64,7 @@ export default function Hourly() {
                 className="d-flex gap-5 list-unstyled justify-content-center"
                 style={{
                   overflow: "overlay",
+                  flexWrap: "wrap",
                 }}
               >
                 <li>
@@ -70,7 +74,7 @@ export default function Hourly() {
                   humidity : <b>{hourly.humidity} %</b>
                 </li>
                 <li>
-                  precip : <b>{hourly.precip}</b>
+                  precip : <b>{hourly.precip} mm</b>
                 </li>
                 <li>
                   precipprob : <b>{hourly.precipprob} %</b>
