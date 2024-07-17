@@ -11,6 +11,8 @@ import FourteenDays from "./components/FourteenDays";
 import SevenDay from "./components/SevenDay";
 import Threeday from "./components/Threeday";
 import Hourly from "./components/Hourly";
+import { ErrorBoundary } from "react-error-boundary";
+import ErrorPage from "./components/ErrorPage";
 
 function App() {
   const loading = useSelector((state) => state.whether.isWetherLoading);
@@ -19,18 +21,17 @@ function App() {
     <>
       <Navbar />
       <CategotyHeader />
-      {/* {loading ? <h1>Loading please wait</h1> : <Outlet />} */}
-
-      <Routes>
-        <Route path="/" element={<CurrentCondition />} />
-        <Route path="/current" element={<CurrentCondition />} />
-        <Route path="/hourly" element={<Hourly />} />
-        <Route path="/three" element={<Threeday />} />
-        <Route path="/seven" element={<SevenDay />} />
-        <Route path="/fourteen" element={<FourteenDays />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-
+      <ErrorBoundary fallback={<ErrorPage />}>
+        <Routes>
+          <Route path="/" element={<CurrentCondition />} />
+          <Route path="/current" element={<CurrentCondition />} />
+          <Route path="/hourly" element={<Hourly />} />
+          <Route path="/three" element={<Threeday />} />
+          <Route path="/seven" element={<SevenDay />} />
+          <Route path="/fourteen" element={<FourteenDays />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </ErrorBoundary>
       <Footer />
     </>
   );

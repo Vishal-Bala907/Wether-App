@@ -1,4 +1,3 @@
-import React from "react";
 import { FaTemperatureEmpty } from "react-icons/fa6";
 import { GiDew, GiWindsock } from "react-icons/gi";
 import { TbSunrise, TbSunset, TbUvIndex } from "react-icons/tb";

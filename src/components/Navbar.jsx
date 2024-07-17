@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
 import { setWethers, setIsWetherLoading } from "../redux/whetherslice";
 import { useDispatch } from "react-redux";
 import { WHETHER_API_KEY } from "../../config";
+import { useEffect, useRef, useState } from "react";
 
 export default function Navbar() {
   const area = useRef();
@@ -37,7 +37,7 @@ export default function Navbar() {
   return (
     <nav className="navbar bg-body-tertiary">
       <div className="container-fluid">
-        <a className="navbar-brand">Whether</a>
+        <a className="navbar-brand">Wheather</a>
         <form
           className="d-flex"
           role="search"

@@ -1,4 +1,3 @@
-import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,7 +6,6 @@ import {
   faInstagram,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import "../styles/About.css"; // Make sure to create this CSS file
@@ -37,7 +35,7 @@ const About = () => {
 
               <h2>About Me</h2>
               <p>
-                Hi, I'm Vishal Bala, a Spring Boot and MERN developer. My
+                Hi, Im Vishal Bala, a Spring Boot and MERN developer. My
                 skillset includes:
               </p>
               <div className="row">

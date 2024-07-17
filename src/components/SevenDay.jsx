@@ -1,4 +1,3 @@
-import React from "react";
 import CreateWhetherCard from "./CreateWhetherCard";
 import { useSelector } from "react-redux";
 

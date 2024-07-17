@@ -1,6 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import dummyCurrent from "../dummydata/dummyCurrent";
-import hourlyDummy from "../dummydata/hourly";
 
 const whetherSlice = createSlice({
   name: "whether",
